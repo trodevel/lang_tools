@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Id: parser.h 1082 2014-09-26 23:23:05Z serge $
+// $Revision: 1404 $ $Date:: 2015-01-16 #$ $Author: serge $
 
 #ifndef LANG_TOOLS_PARSER_H
 #define LANG_TOOLS_PARSER_H

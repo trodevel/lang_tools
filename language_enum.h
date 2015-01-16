@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Id: language_enum.h 1082 2014-09-26 23:23:05Z serge $
+// $Revision: 1404 $ $Date:: 2015-01-16 #$ $Author: serge $
 
 #ifndef LANGUAGE_ENUMS_H
 #define LANGUAGE_ENUMS_H
