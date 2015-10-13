@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 1404 $ $Date:: 2015-01-16 #$ $Author: serge $
+// $Revision: 2722 $ $Date:: 2015-10-13 #$ $Author: serge $
 
 #include "str_helper.h"             // self
 
@@ -27,19 +27,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 NAMESPACE_LANG_TOOLS_START
 
-#define GLUE( _a, _b )  _a ## _b
-
 #define TUPLE_VAL_STR(_x_)  _x_,#_x_
 #define TUPLE_STR_VAL(_x_)  #_x_,_x_
 
-#define TUPLE_STR_VAL_PREF(_pref,_x_)  #_x_,GLUE(_pref,_x_)
-#define TUPLE_VAL_STR_PREF(_pref,_x_)  GLUE(_pref,_x_),#_x_
-
-#define MAP_INSERT_VS( _m, _val )              _m.insert( Map::value_type( TUPLE_VAL_STR( _val ) ) )
-#define MAP_INSERT_VS_PREF( _m, _pref, _val )  _m.insert( Map::value_type( TUPLE_VAL_STR_PREF( _pref, _val ) ) )
-
-#define MAP_INSERT( _m, _val )              _m.insert( Map::value_type( TUPLE_STR_VAL( _val ) ) )
-#define MAP_INSERT_PREF( _m, _pref, _val )  _m.insert( Map::value_type( TUPLE_STR_VAL_PREF( _pref, _val ) ) )
+#define MAP_INSERT_VAL( _m, _val )      _m.insert( Map::value_type( _val ) )
 
 std::string to_string( const lang_e l )
 {
@@ -47,10 +38,10 @@ std::string to_string( const lang_e l )
     static Map m;
     if( m.empty() )
     {
-        MAP_INSERT_VS( m, lang_e::UNDEF );
-        MAP_INSERT_VS( m, lang_e::EN );
-        MAP_INSERT_VS( m, lang_e::DE );
-        MAP_INSERT_VS( m, lang_e::RU );
+        MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( UNDEF ) );
+        MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( EN ) );
+        MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( DE ) );
+        MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( RU ) );
     }
 
     if( 0 == m.count( l ) )
