@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 2722 $ $Date:: 2015-10-13 #$ $Author: serge $
+// $Revision: 2913 $ $Date:: 2015-12-07 #$ $Author: serge $
 
 #include "str_helper.h"             // self
 
@@ -42,6 +42,9 @@ std::string to_string( const lang_e l )
         MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( EN ) );
         MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( DE ) );
         MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( RU ) );
+        MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( FR ) );
+        MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( IT ) );
+        MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( ES ) );
     }
 
     if( 0 == m.count( l ) )

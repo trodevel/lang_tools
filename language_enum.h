@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 1404 $ $Date:: 2015-01-16 #$ $Author: serge $
+// $Revision: 2913 $ $Date:: 2015-12-07 #$ $Author: serge $
 
 #ifndef LANGUAGE_ENUMS_H
 #define LANGUAGE_ENUMS_H
@@ -33,7 +33,10 @@ enum class lang_e
     UNDEF,
     EN,
     DE,
-    RU
+    RU,
+    FR,
+    IT,
+    ES,
 };
 
 NAMESPACE_LANG_TOOLS_END
