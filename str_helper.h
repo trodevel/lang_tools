@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 1404 $ $Date:: 2015-01-16 #$ $Author: serge $
+// $Revision: 2936 $ $Date:: 2015-12-07 #$ $Author: serge $
 
 #include <string>
 
@@ -29,6 +29,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 NAMESPACE_LANG_TOOLS_START
 
-std::string to_string( const lang_e l );
+const std::string & to_string( const lang_e l );
 
 NAMESPACE_LANG_TOOLS_END

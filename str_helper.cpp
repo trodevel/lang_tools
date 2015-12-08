@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 2913 $ $Date:: 2015-12-07 #$ $Author: serge $
+// $Revision: 2936 $ $Date:: 2015-12-07 #$ $Author: serge $
 
 #include "str_helper.h"             // self
 
@@ -32,7 +32,7 @@ NAMESPACE_LANG_TOOLS_START
 
 #define MAP_INSERT_VAL( _m, _val )      _m.insert( Map::value_type( _val ) )
 
-std::string to_string( const lang_e l )
+const std::string & to_string( const lang_e l )
 {
     typedef std::map< lang_e, std::string > Map;
     static Map m;
@@ -47,8 +47,10 @@ std::string to_string( const lang_e l )
         MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( ES ) );
     }
 
+    static const std::string empty( "UNDEF" );
+
     if( 0 == m.count( l ) )
-        return "UNDEF";
+        return empty;
 
     return m[l];
 }
