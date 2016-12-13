@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 2936 $ $Date:: 2015-12-07 #$ $Author: serge $
+// $Revision: 2959 $ $Date:: 2015-12-10 #$ $Author: serge $
 
 #include <string>
 

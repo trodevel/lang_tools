@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 1404 $ $Date:: 2015-01-16 #$ $Author: serge $
+// $Revision: 5245 $ $Date:: 2016-12-14 #$ $Author: serge $
 
 #ifndef LANG_TOOLS_PARSER_H
 #define LANG_TOOLS_PARSER_H
@@ -33,6 +33,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 NAMESPACE_LANG_TOOLS_START
 
 lang_e               to_lang( const std::string & s );
+lang_e               to_lang_iso( const std::string & s );
 
 NAMESPACE_LANG_TOOLS_END
 
