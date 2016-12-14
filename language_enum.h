@@ -1,6 +1,6 @@
 /*
 
-Lnaguage enums.
+Language enums.
 
 Copyright (C) 2014 Sergey Kolevatov
 
@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 2959 $ $Date:: 2015-12-10 #$ $Author: serge $
+// $Revision: 5250 $ $Date:: 2016-12-14 #$ $Author: serge $
 
 #ifndef LANGUAGE_ENUMS_H
 #define LANGUAGE_ENUMS_H
@@ -31,12 +31,7 @@ NAMESPACE_LANG_TOOLS_START
 enum class lang_e
 {
     UNDEF,
-    EN,
-    DE,
-    RU,
-    FR,
-    IT,
-    ES,
+#include "language_enum_inc.h"
 };
 
 NAMESPACE_LANG_TOOLS_END

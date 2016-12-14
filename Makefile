@@ -66,7 +66,7 @@ EXE=
 
 #vpath %.cpp .
 
-SRCC = parser.cpp str_helper.cpp
+SRCC = parser.cpp str_helper.cpp table_generator.cpp
 
 OBJS = $(patsubst %.cpp,$(OBJDIR)/%.o,$(SRCC)) $(patsubst %.c,$(OBJDIR)/%.o,$(SRCC))
 

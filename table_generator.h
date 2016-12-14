@@ -1,8 +1,8 @@
 /*
 
-String Helper. Provides to_string() function.
+Table Generator.
 
-Copyright (C) 2014 Sergey Kolevatov
+Copyright (C) 2016 Sergey Kolevatov
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,9 +19,13 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 5258 $ $Date:: 2016-12-14 #$ $Author: serge $
+// $Revision: 5251 $ $Date:: 2016-12-14 #$ $Author: serge $
 
-#include <string>
+#ifndef LANG_TOOLS_TABLE_GENERATOR_H
+#define LANG_TOOLS_TABLE_GENERATOR_H
+
+#include <string>               // std::string
+#include <map>                  // std::map
 
 #include "language_enum.h"      // lang_e
 
@@ -29,7 +33,11 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 NAMESPACE_LANG_TOOLS_START
 
-const std::string & to_string( const lang_e l );
-const std::string & to_string_iso( const lang_e l );
+std::map<lang_e,std::string>      generate_table_to_string();
+std::map<lang_e,std::string>      generate_table_to_string_iso();
+std::map<std::string,lang_e>      generate_table_to_lang();
+std::map<std::string,lang_e>      generate_table_to_lang_iso();
 
 NAMESPACE_LANG_TOOLS_END
+
+#endif // LANG_TOOLS_TABLE_GENERATOR_H

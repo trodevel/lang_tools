@@ -19,40 +19,40 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 2959 $ $Date:: 2015-12-10 #$ $Author: serge $
+// $Revision: 5258 $ $Date:: 2016-12-14 #$ $Author: serge $
 
 #include "str_helper.h"             // self
 
-#include <map>
+#include "table_generator.h"        // generate_table_to_string()
 
 NAMESPACE_LANG_TOOLS_START
 
-#define TUPLE_VAL_STR(_x_)  _x_,#_x_
-#define TUPLE_STR_VAL(_x_)  #_x_,_x_
-
-#define MAP_INSERT_VAL( _m, _val )      _m.insert( Map::value_type( _val ) )
-
 const std::string & to_string( const lang_e l )
 {
-    typedef std::map< lang_e, std::string > Map;
-    static Map m;
-    if( m.empty() )
-    {
-        MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( UNDEF ) );
-        MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( EN ) );
-        MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( DE ) );
-        MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( RU ) );
-        MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( FR ) );
-        MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( IT ) );
-        MAP_INSERT_VAL( m, lang_e:: TUPLE_VAL_STR( ES ) );
-    }
+    static const auto m = generate_table_to_string();
 
-    static const std::string empty( "UNDEF" );
+    auto it = m.find( l );
 
-    if( 0 == m.count( l ) )
-        return empty;
+    static const std::string undef( "UNDEF" );
 
-    return m[l];
+    if( it == m.end() )
+        return undef;
+
+    return it->second;
+}
+
+const std::string & to_string_iso( const lang_e l )
+{
+    static const auto m = generate_table_to_string_iso();
+
+    auto it = m.find( l );
+
+    static const std::string undef( "UNDEF" );
+
+    if( it == m.end() )
+        return undef;
+
+    return it->second;
 }
 
 NAMESPACE_LANG_TOOLS_END
