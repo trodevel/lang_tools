@@ -18,7 +18,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 
-# $Revision: 5249 $ $Date:: 2016-12-14 #$ $Author: serge $
+# $Revision: 5280 $ $Date:: 2016-12-19 #$ $Author: serge $
 
 cat langs.csv | awk 'BEGIN { FS=";" } { print "    { lang_e::" toupper($2) ", \"" toupper( $2 ) "\", \"" $2 "\", \"" $3 "\", \"" $1 "\" }," }' > langs_inc.h
 

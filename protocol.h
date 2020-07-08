@@ -1,8 +1,8 @@
 /*
 
-Language enums.
+Wrapper for APPG.
 
-Copyright (C) 2014 Sergey Kolevatov
+Copyright (C) 2020 Sergey Kolevatov
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,21 +19,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 5280 $ $Date:: 2016-12-19 #$ $Author: serge $
+// $Revision: 13387 $ $Date:: 2020-07-08 #$ $Author: serge $
 
-#ifndef LANGUAGE_ENUMS_H
-#define LANGUAGE_ENUMS_H
-
-#include "namespace_lib.h"      // NAMESPACE_LANG_TOOLS_START
-
-NAMESPACE_LANG_TOOLS_START
-
-enum class lang_e
-{
-    UNDEF,
-#include "language_enum_inc.h"
-};
-
-NAMESPACE_LANG_TOOLS_END
-
-#endif // LANGUAGE_ENUMS_H
+#include "language_enum.h"          // lang_e
