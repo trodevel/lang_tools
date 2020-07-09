@@ -19,11 +19,14 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 5280 $ $Date:: 2016-12-19 #$ $Author: serge $
+// $Revision: 13394 $ $Date:: 2020-07-09 #$ $Author: serge $
 
 #include "parser.h"                 // self
 
 #include "table_generator.h"        // generate_table_to_lang()
+
+#include "basic_parser/parser.h"
+#include "basic_parser/malformed_request.h"
 
 NAMESPACE_LANG_TOOLS_START
 
@@ -53,5 +56,21 @@ lang_e to_lang_iso( const std::string & s )
     return it->second;
 }
 
+namespace parser
+{
+
+using ::basic_parser::parser::get_value_or_throw;
+using ::basic_parser::parser::get_value_or_throw_t;
+
+void get_value_or_throw( lang_e * res, const std::string & key, const generic_request::Request & r )
+{
+    uint32_t res_i;
+
+    get_value_or_throw( & res_i, key, r );
+
+    * res = static_cast<lang_e>( res_i );
+}
+
+}
 
 NAMESPACE_LANG_TOOLS_END
