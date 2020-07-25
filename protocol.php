@@ -1,6 +1,6 @@
 <?php
 
-namespace lang_tools_protocol;
+namespace lang_tools;
 
 
 // includes
@@ -158,7 +158,7 @@ const lang_e__YO                   = 145;
 const lang_e__ZA                   = 146;
 const lang_e__ZU                   = 147;
 
-# namespace_end lang_tools_protocol
+# namespace_end lang_tools
 
 
 ?>

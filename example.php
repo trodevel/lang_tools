@@ -1,6 +1,6 @@
 <?php
 
-namespace lang_tools_protocol;
+namespace lang_tools;
 
 
 // includes
@@ -24,7 +24,7 @@ require_once 'request_encoder.php';
 
 }
 
-# namespace_end lang_tools_protocol
+# namespace_end lang_tools
 
 
 ?>

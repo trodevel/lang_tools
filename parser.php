@@ -1,6 +1,6 @@
 <?php
 
-namespace lang_tools_protocol;
+namespace lang_tools;
 
 
 // includes
@@ -39,7 +39,7 @@ protected static function parse_csv_array( $csv_arr )
 
     if( array_key_exists( $type, $handler_map ) )
     {
-        $func = '\\lang_tools_protocol\\' . $handler_map[ $type ];
+        $func = '\\lang_tools\\' . $handler_map[ $type ];
         return $func( $csv_arr[0] );
     }
 
@@ -48,7 +48,7 @@ protected static function parse_csv_array( $csv_arr )
 
 }
 
-# namespace_end lang_tools_protocol
+# namespace_end lang_tools
 
 
 ?>

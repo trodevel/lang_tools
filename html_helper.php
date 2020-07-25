@@ -1,6 +1,6 @@
 <?php
 
-namespace lang_tools_protocol;
+namespace lang_tools;
 
 
 // includes
@@ -38,14 +38,14 @@ function to_html( $obj )
 
     if( array_key_exists( $type, $handler_map ) )
     {
-        $func = '\\lang_tools_protocol\\' . $handler_map[ $type ];
+        $func = '\\lang_tools\\' . $handler_map[ $type ];
         return $func( $obj );
     }
 
     return NULL;
 }
 
-# namespace_end lang_tools_protocol
+# namespace_end lang_tools
 
 
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-namespace lang_tools_protocol;
+namespace lang_tools;
 
 
 // includes
@@ -20,7 +20,7 @@ function create_dummy__lang_e()
 
 // messages
 
-# namespace_end lang_tools_protocol
+# namespace_end lang_tools
 
 
 ?>

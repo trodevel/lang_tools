@@ -1,6 +1,6 @@
 <?php
 
-namespace lang_tools_protocol;
+namespace lang_tools;
 
 
 // includes
@@ -16,7 +16,7 @@ require_once 'protocol.php';
 
 // messages (constructors)
 
-# namespace_end lang_tools_protocol
+# namespace_end lang_tools
 
 
 ?>
