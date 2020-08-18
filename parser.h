@@ -19,12 +19,10 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 13394 $ $Date:: 2020-07-09 #$ $Author: serge $
+// $Revision: 13514 $ $Date:: 2020-08-18 #$ $Author: serge $
 
 #ifndef LANG_TOOLS_PARSER_H
 #define LANG_TOOLS_PARSER_H
-
-#include "generic_request/request.h"
 
 #include <string>               // std::string
 
@@ -36,13 +34,6 @@ NAMESPACE_LANG_TOOLS_START
 
 lang_e               to_lang( const std::string & s );
 lang_e               to_lang_iso( const std::string & s );
-
-namespace parser
-{
-
-void get_value_or_throw( lang_e * res, const std::string & key, const generic_request::Request & r );
-
-}
 
 NAMESPACE_LANG_TOOLS_END
 

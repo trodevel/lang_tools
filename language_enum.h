@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 13390 $ $Date:: 2020-07-09 #$ $Author: serge $
+// $Revision: 13514 $ $Date:: 2020-08-18 #$ $Author: serge $
 
 #ifndef LANGUAGE_ENUMS_H
 #define LANGUAGE_ENUMS_H
@@ -32,7 +32,6 @@ enum class lang_e
 {
     UNDEF,
 #include "language_enum_inc.h"
-    _LAST
 };
 
 NAMESPACE_LANG_TOOLS_END

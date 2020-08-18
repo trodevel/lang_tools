@@ -19,7 +19,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 */
 
-// $Revision: 13396 $ $Date:: 2020-07-23 #$ $Author: serge $
+// $Revision: 13514 $ $Date:: 2020-08-18 #$ $Author: serge $
 
 #include "str_helper.h"             // self
 
@@ -54,19 +54,5 @@ const std::string & to_string_iso( const lang_e l )
 
     return it->second;
 }
-
-namespace str_helper
-{
-
-// enums
-
-std::ostream & write( std::ostream & os, const lang_e r )
-{
-    os << lang_tools::to_string( r );
-
-    return os;
-}
-
-} // namespace str_helper
 
 NAMESPACE_LANG_TOOLS_END
